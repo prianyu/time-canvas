@@ -1,0 +1,8 @@
+<view class="wrap">
+  <canvas canvas-id="time" style="width:300px;height: 200px;background:#000;"></canvas>
+  <cover-view class="mili">.{{milliseconds}}</cover-view>
+</view>
+  <view class="btn-group">
+    <view class="btn" bindtap="reset">复位</view>
+    <view class="btn" bindtap="togglePlay">{{ pause ? '启动' : '暂停' }}</view>
+  </view>

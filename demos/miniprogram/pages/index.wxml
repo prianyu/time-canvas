@@ -1,0 +1,3 @@
+<button type="primary" bindtap="to" data-type="time">时间</button>
+<button type="warn" bindtap="to" data-type="count">计时</button>
+<button type="primary" bindtap="to" data-type="countdown">倒计时</button>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      background: radial-gradient(#c0f3f3,#336699);
+    }
+  </style>
+</head>
+<body>
+<canvas id="time"></canvas>
+
+<script src="../dist/time.min.js"></script>
+<script>
+  var time = new TimeCanvas('time', {
+      width: 400,
+      height: 250,
+      color: "#FFF",
+      // format: "h:i",
+      format: "h:i:s",
+      size: 40,
+      init: e => {
+        console.log('init', e)
+      },
+      change: (e) => {
+        // console.log("时间改变", e)
+      }
+    })
+</script>
+</body>
+</html>

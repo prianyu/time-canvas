@@ -1,0 +1,31 @@
+{
+  "name": "time-canvas",
+  "version": "1.0.0",
+  "description": "A tool for drawing time using canvas",
+  "main": "./src/time.js",
+  "scripts": {
+    "build": "gulp build",
+    "build:mini": "gulp build --miniprogram"
+  },
+  "keywords": [
+    "time-canvas",
+    "canvas-time",
+    "canvas-countdown"
+  ],
+  "author": "prianYu",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/plugin-external-helpers": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "rollup": "^2.62.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-jscc": "^2.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0"
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      background: radial-gradient(#c0f3f3,#336699);
+    }
+    .btn-group {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    .button {
+      width:100px;
+      float:left;
+      margin: 10px;
+      background: green;
+      border-radius: 10px;
+      color: #FFF;
+      text-align: center;
+      font-size: 18px;
+      line-height: 48px;
+      cursor: pointer;
+    }
+    .button:hover {
+      opacity: .8;
+    }
+  </style>
+</head>
+<body>
+<canvas id="time"></canvas>
+<div class="btn-group">
+  <div class="button" id="reset">复位</div>
+  <div class="button" id="toggle">启动</div>
+</div>
+
+<script src="../dist/time.all.js"></script>
+<script>
+  var pause = true
+  var startBtn = document.getElementById("toggle")
+  var resetBtn = document.getElementById('reset')
+
+  var time = new TimeCanvas('time', {
+    type: 'countdown',
+    width: 400,
+    height: 250,
+    color: "#FFF",
+    format: "h:i:s",
+    endTime: 55,
+    //format: "s", // 此时将表现为单纯的计数器
+    size: 40,
+    init: e => {
+      console.log('init', e)
+    },
+    change: (e) => {
+      // console.log("时间改变", e)
+    },
+    start: e => {
+      console.log("启动")
+    },
+    end: () => {
+      console.log("计时结束")
+    },
+    finish: () =>{
+      console.log('计时结束且动画执行结束')
+    }
+  })
+
+  console.log(time)
+
+  startBtn.addEventListener('click', togglePlay, false)
+  resetBtn.addEventListener('click', reset, false)
+
+  function togglePlay() {
+    console.log(pause)
+    if(pause) {
+      time.play(1) //保留原有计时继续播放
+    } else {
+      time.pause(true) // 停止时保留当前画布状态
+    }
+    pause = !pause
+    startBtn.textContent = pause ? '启动' : '暂停'
+  }
+
+  function reset() {
+    time.reset()
+    pause = true
+    startBtn.textContent = '启动'
+  }
+</script>
+</body>
+</html>

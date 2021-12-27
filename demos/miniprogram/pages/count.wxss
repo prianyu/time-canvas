@@ -1,0 +1,25 @@
+page {
+  background: #f2f2f2;
+}
+.wrap {
+  display: flex; 
+  justify-content: center;
+  margin: 50rpx 0;
+  position: relative;
+}
+.mili {
+  position: absolute;
+  bottom: 20rpx;
+  left: 50%;
+  transform: translate(-50%);
+  color: #FFF;
+}
+.btn {
+  width: 200rpx;
+  margin: 20rpx auto;
+  background: #249ff1;
+  border-radius: 10rpx;
+  line-height: 96rpx;
+  color: #FFF;
+  text-align: center;
+}

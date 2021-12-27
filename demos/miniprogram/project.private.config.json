@@ -1,0 +1,36 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "time",
+          "pathName": "pages/time",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "count",
+          "pathName": "pages/count",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "countdown",
+          "pathName": "pages/countdown",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,4 @@
+<view style="display:flex; justify-content:center;margin: 50rpx 0;">
+  <canvas canvas-id="time" style="width:300px;height: 200px;background:#000;"></canvas>
+</view>
+
