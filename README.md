@@ -57,7 +57,7 @@ dist目录下的文件列表和说明如下：
 
 ### 1. 构造函数
 
-> new TimeCanvas(id, options)
+`new TimeCanvas(id, options)`
 
 ```javascript
 var time = new TimeCanvas('time', {
@@ -66,6 +66,9 @@ var time = new TimeCanvas('time', {
 });
 
 ```
+**id**
+画布的id，默认为canvas
+
 **options**
 
 + （1）以下为所有的版本均支持的配置：
@@ -119,16 +122,13 @@ var time = new TimeCanvas('time', {
 
 以下为小程序下实现的几种效果：
 
-![](./images/time.gif)
-![](./images/count.gif)
-![](./images/countdown.gif)
+<img src="./images/time.gif" width="150px" />
+<img src="./images/count.gif" width="150px" />
+<img src="./images/countdown.gif" width="150px" />
 
 你也可以通过扫描以下二维码体验
 
-
-![](./images/count.png)
-![](./images/num.png)
-![](./images/down.png)
-
-[Demos](./test/index.html)
+<img src="./images/count.png" width="150px" />
+<img src="./images/num.png" width="150px" />
+<img src="./images/down.png" width="150px" />
 
