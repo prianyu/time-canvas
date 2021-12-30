@@ -400,7 +400,7 @@
         } // 粒子半径
 
 
-        if (size) {
+        if (size > 0) {
           radius = size / 14 - 1;
         } else {
           radius = validWidth / count - 1;
@@ -453,7 +453,8 @@
   var TYPES = ['time', 'count', 'countdown'];
   var DEFAULT_OPTIONS = {
     type: TYPES[0],
-    autoConvert: true
+    autoConvert: true,
+    endTime: -1
   };
 
   var Time = /*#__PURE__*/function (_Base) {

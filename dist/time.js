@@ -249,7 +249,7 @@
           this._currentTime = nextTime;
         }
 
-        this._updateBalls();
+        this._updateBalls(nextTime);
       } // abstract
 
     }, {
@@ -401,7 +401,7 @@
         } // 粒子半径
 
 
-        if (size) {
+        if (size > 0) {
           radius = size / 14 - 1;
         } else {
           radius = validWidth / count - 1;

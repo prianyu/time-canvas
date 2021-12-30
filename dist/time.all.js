@@ -249,7 +249,7 @@
           this._currentTime = nextTime;
         }
 
-        this._updateBalls();
+        this._updateBalls(nextTime);
       } // abstract
 
     }, {
@@ -401,7 +401,7 @@
         } // 粒子半径
 
 
-        if (size) {
+        if (size > 0) {
           radius = size / 14 - 1;
         } else {
           radius = validWidth / count - 1;
@@ -454,7 +454,8 @@
   var TYPES = ['time', 'count', 'countdown'];
   var DEFAULT_OPTIONS = {
     type: TYPES[0],
-    autoConvert: true
+    autoConvert: true,
+    endTime: -1
   };
 
   var Time = /*#__PURE__*/function (_Base) {
@@ -608,7 +609,6 @@
     }, {
       key: "pause",
       value: function pause(reserve) {
-        console.log(this);
         if (this._state.stopped) return;
         this._state.stopped = true;
         this._state.diff = new Date() - this._startTime.time;
@@ -659,7 +659,7 @@
       }
     }, {
       key: "_updateBalls",
-      value: function _updateBalls() {
+      value: function _updateBalls(time) {
         var ballCount = this._getRenderBalls();
 
         if (!ballCount && this._state.ended) {
@@ -671,7 +671,8 @@
         }
 
         if (this._state.ended && !this._state.waiting) {
-          this.emit("end", nextTime);
+          this._emit("end", time);
+
           this._state.waiting = true;
         }
       }

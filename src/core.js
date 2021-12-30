@@ -1,7 +1,7 @@
 import digit from './meta'
 const FORMATS = ['h:i:s', 'h:i', 'i:s', 's']
 export const DEFAULT_OPTIONS = {
-  colors: ["#33B5E5","#0099CC","#AA66CC","#9933CC","#99CC00","#669900","#FFBB33","#FF8800","#FF4444","#CC0000"],
+  colors: ["#99CCFF","#0099CC","#FF9999","#FF0033", "#FFCC99","#FF6600","#99CC33","#339933","#CCCCFF","#993399","#FFFF66","#FFCC00", "#FF33CC", "#666633"],
   color: '#0081FF',
   width: 320,
   height: 200,
@@ -234,7 +234,7 @@ export class Base {
 		}
 
 		// 粒子半径
-		if(size) {
+		if(size > 0) {
       radius = size / 14 - 1
 		} else {
 			radius = validWidth / count - 1

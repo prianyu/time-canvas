@@ -6,7 +6,8 @@ import {
 const TYPES = ['time', 'count', 'countdown']
 const DEFAULT_OPTIONS = {
   type: TYPES[0],
-    autoConvert: true
+  autoConvert: true,
+	endTime: -1
 }
 
 export default class Time extends Base {

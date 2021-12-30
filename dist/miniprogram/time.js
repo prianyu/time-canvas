@@ -400,7 +400,7 @@
         } // 粒子半径
 
 
-        if (size) {
+        if (size > 0) {
           radius = size / 14 - 1;
         } else {
           radius = validWidth / count - 1;
