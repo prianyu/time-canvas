@@ -122,13 +122,9 @@ var time = new TimeCanvas('time', {
 
 以下为小程序下实现的几种效果：
 
-<img src="./images/time.gif" width="150px" />
-<img src="./images/count.gif" width="150px" />
-<img src="./images/countdown.gif" width="150px" />
+<img src="./images/time.gif" width="200px" /><img src="./images/count.gif" width="200px" /><img src="./images/countdown.gif" width="200px" />
 
 你也可以通过扫描以下二维码体验
 
-<img src="./images/count.png" width="150px" />
-<img src="./images/num.png" width="150px" />
-<img src="./images/down.png" width="150px" />
+<img src="./images/count.png" width="200px" /><img src="./images/num.png" width="200px" /><img src="./images/down.png" width="200px" />
 
