@@ -111,6 +111,13 @@ var time = new TimeCanvas('time', {
 + **destroy**：销毁当前实例，销毁后画布将被清空
 + **reset**：重置实例，仅在type为count和countdown有效，重置后回到初始状态
 
+### 3. 生命周期钩子
+
++ **init(e)**：实例化钩子，接收当前时间
++ **change(e)**：时间改变的钩子，接收当前时间
++ **start(e)**：首次启动的钩子，接收当前时间，仅在count和countdown类型下有效
++ **end(e)**：计时结束的钩子，接收当前结束的时间，仅在count和countdown类型下有效
++ **finish(e)**：计时结束且所有的运动粒子离开画布时的钩子，接收当前时间，仅在count和countdown类型下有效
 
 
 ### 

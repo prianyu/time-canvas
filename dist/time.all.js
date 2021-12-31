@@ -127,6 +127,18 @@
   ];
 
   var FORMATS = ['h:i:s', 'h:i', 'i:s', 's'];
+  var DEFAULT_OPTIONS$1 = {
+    colors: ["#99CCFF", "#0099CC", "#FF9999", "#FF0033", "#FFCC99", "#FF6600", "#99CC33", "#339933", "#CCCCFF", "#993399", "#FFFF66", "#FFCC00", "#FF33CC", "#666633"],
+    color: '#0081FF',
+    width: 320,
+    height: 200,
+    center: true,
+    middle: true,
+    padding: 20,
+    size: 0,
+    ballCount: 300,
+    format: FORMATS[0]
+  };
   var pad = function pad(n) {
     return n < 10 ? "0".concat(n) : n;
   };
@@ -137,18 +149,7 @@
 
       _classCallCheck(this, Base);
 
-      this.options = Object.assign({
-        colors: ["#33B5E5", "#0099CC", "#AA66CC", "#9933CC", "#99CC00", "#669900", "#FFBB33", "#FF8800", "#FF4444", "#CC0000"],
-        color: '#0081FF',
-        width: 320,
-        height: 200,
-        center: true,
-        middle: true,
-        padding: 20,
-        size: 0,
-        ballCount: 300,
-        format: FORMATS[0]
-      }, options);
+      this.options = Object.assign(DEFAULT_OPTIONS$1, options);
       this.id = id || 'canvas';
       this._balls = [];
       var canvas = document.getElementById(this.id);
